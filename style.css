@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: rgb(40, 40, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  height: 80%;
+  width: 30%;
+  background: black;
+  border: 6px solid rgb(3, 3, 34);
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.screen {
+  position: relative;
+  height: 22%;
+  width: 93%;
+  background: peachpuff;
+  border: 3px solid rgb(40, 40, 43);
+  margin-top: 4%;
+  border-radius: 4px;
+  font-family: "Orbitron", sans-serif;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transition: all 1000ms ease-in-out;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  background: black;
+  transform: translateX(-100%);
+}
+.operation {
+  position: absolute;
+  top: 10%;
+  left: 4%;
+  height: 23%;
+  width: 8%;
+  /* background: peachpuff; */
+  color: black;
+  font-family: "Orbitron", sans-serif;
+  font-size: 150%;
+  text-align: center;
+  font-weight: 900;
+  /* margin: 0; */
+}
+.digits {
+  margin-right: 0.5em;
+  font-size: xx-large;
+  font-weight: 700;
+  letter-spacing: 3px;
+  /* transition: all 1000ms ease-in-out; */
+}
+
+.keypad {
+  margin: 0.5em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.button {
+  height: 60px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 160%;
+  cursor: pointer;
+}
+.button:nth-child(3) {
+  grid-column: span 2;
+  background: rgb(209, 66, 66);
+}
+.button:last-child {
+  background: rgba(237, 148, 77, 1);
+}
+@media screen and (max-width: 500px) {
+  .container {
+    height: 90%;
+    width: 92%;
+  }
+}
+@keyframes slider {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
