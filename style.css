@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  height: 100vh;
   height: 100dvh;
   background: rgb(40, 40, 43);
   display: flex;
